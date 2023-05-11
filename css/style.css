@@ -1,0 +1,342 @@
+/* START GENERAL CSS */
+:root {
+	--primary-1: #ff0000;
+	--secondary-1: #faf000;
+	--secondary-2: #fba72a;
+	--secondary-3: #fdd395;
+	--secondary-4: #f7f2eb;
+}
+html {
+	font-family: "Lato", sans-serif;
+	box-sizing: border-box;
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+}
+.container {
+	max-width: 1366px;
+	margin: auto;
+}
+/* End General CSS */
+/* Start Header Section  */
+header {
+	background-image: url(../images/01-heroimage.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.logo-div {
+	padding: 2rem 0rem;
+	text-align: center;
+}
+.logo-img {
+	height: 8rem;
+	animation: logo 1s alternate infinite ease-in-out;
+	-webkit-animation: logo 1s alternate infinite ease-in-out;
+}
+@keyframes logo {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+	}
+	100% {
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-moz-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+		-o-transform: scale(0.95);
+	}
+}
+.menu-div {
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	justify-content: center;
+	gap: 8rem;
+}
+.menu-link:link,
+.menu-link:visited {
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--secondary-3);
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-bottom: 1rem;
+	border-bottom: 3px solid transparent;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.menu-link:hover,
+.menu-link:active {
+	color: var(--primary-1);
+	border-bottom: 3px solid var(--primary-1);
+	transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-o-transform: scale(0.95);
+}
+.header-text-div {
+	text-align: center;
+	margin-top: 10rem;
+}
+.header-text {
+	font-size: 5rem;
+	text-transform: uppercase;
+	line-height: 6rem;
+	background-color: rgb(247, 242, 235, 0.3);
+	border: 1px solid transparent;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.header-text:hover {
+	background-color: rgb(247, 242, 235, 0.6);
+	border: 1px solid var(--secondary-2);
+	cursor: pointer;
+}
+.header-text span {
+	display: block;
+	letter-spacing: 3px;
+	color: var(--primary-1);
+}
+.header-btns {
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 15rem);
+	justify-content: center;
+	gap: 2rem;
+}
+.btn1:link,
+.btn1:visited,
+.btn2:link,
+.btn2:visited,
+.btn3:link,
+.btn3:visited {
+	display: inline-block;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 1rem;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.btn1:link,
+.btn1:visited {
+	background-color: var(--secondary-1);
+	color: black;
+}
+.btn1:hover,
+.btn1:active {
+	background-color: var(--primary-1);
+}
+.btn2:link,
+.btn2:visited,
+.btn3:link,
+.btn3:visited {
+	background-color: black;
+	color: var(--secondary-1);
+}
+.btn2:hover,
+.btn2:active,
+.btn3:hover,
+.btn3:active {
+	background-color: var(--primary-1);
+}
+/* Start Animated Bar Div */
+.animated-bar {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: var(--secondary-2);
+	overflow: hidden;
+}
+.animated-bar-div {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	align-items: center;
+	position: relative;
+}
+.animated-bar-div > div {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: var(--secondary-3);
+	z-index: 1;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+.animated-bar-div > div:nth-child(1) {
+	left: 5%;
+	animation: scalUp 5s normal infinite 1s ease-in-out both;
+	-webkit-animation: scalUp 5s normal infinite 1s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(2) {
+	left: 10%;
+	animation: scalUp 3s normal infinite 3s ease-in-out both;
+	-webkit-animation: scalUp 3s normal infinite 3s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(3) {
+	left: 15%;
+	animation: scalUp 7s normal infinite 5s ease-in-out both;
+	-webkit-animation: scalUp 7s normal infinite 5s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(4) {
+	left: 20%;
+	animation: scalUp 9s normal infinite 7s ease-in-out both;
+	-webkit-animation: scalUp 9s normal infinite 7s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(5) {
+	left: 25%;
+	animation: scalUp 5s normal infinite 1s ease-in-out both;
+	-webkit-animation: scalUp 5s normal infinite 1s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(6) {
+	left: 30%;
+	animation: scalUp 3s normal infinite 3s ease-in-out both;
+	-webkit-animation: scalUp 3s normal infinite 3s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(7) {
+	left: 35%;
+	animation: scalUp 7s normal infinite 5s ease-in-out both;
+	-webkit-animation: scalUp 7s normal infinite 5s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(8) {
+	left: 40%;
+	animation: scalUp 9s normal infinite 7s ease-in-out both;
+	-webkit-animation: scalUp 9s normal infinite 7s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(9) {
+	left: 45%;
+	animation: scalUp 5s normal infinite 1s ease-in-out both;
+	-webkit-animation: scalUp 5s normal infinite 1s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(10) {
+	left: 50%;
+	animation: scalUp 3s normal infinite 3s ease-in-out both;
+	-webkit-animation: scalUp 3s normal infinite 3s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(11) {
+	left: 55%;
+	animation: scalUp 7s normal infinite 5s ease-in-out both;
+	-webkit-animation: scalUp 7s normal infinite 5s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(12) {
+	left: 60%;
+	animation: scalUp 9s normal infinite 7s ease-in-out both;
+	-webkit-animation: scalUp 9s normal infinite 7s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(13) {
+	left: 65%;
+	animation: scalUp 5s normal infinite 1s ease-in-out both;
+	-webkit-animation: scalUp 5s normal infinite 1s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(14) {
+	left: 70%;
+	animation: scalUp 3s normal infinite 3s ease-in-out both;
+	-webkit-animation: scalUp 3s normal infinite 3s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(15) {
+	left: 75%;
+	animation: scalUp 7s normal infinite 5s ease-in-out both;
+	-webkit-animation: scalUp 7s normal infinite 5s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(16) {
+	left: 80%;
+	animation: scalUp 9s normal infinite 7s ease-in-out both;
+	-webkit-animation: scalUp 9s normal infinite 7s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(17) {
+	left: 85%;
+	animation: scalUp 5s normal infinite 1s ease-in-out both;
+	-webkit-animation: scalUp 5s normal infinite 1s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(18) {
+	left: 90%;
+	animation: scalUp 7s normal infinite 5s ease-in-out both;
+	-webkit-animation: scalUp 7s normal infinite 5s ease-in-out both;
+}
+.animated-bar-div > div:nth-child(19) {
+	left: 95%;
+	animation: scalUp 9s normal infinite 7s ease-in-out both;
+	-webkit-animation: scalUp 9s normal infinite 7s ease-in-out both;
+}
+@keyframes scalUp {
+	0% {
+		top: 150%;
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		top: -100%;
+		opacity: 0;
+	}
+}
+.animated-bar-message {
+	padding: 3rem 0rem;
+	font-size: 2rem;
+	font-weight: 400;
+	z-index: 2;
+}
+.animated-bar-btn {
+	text-align: right;
+	z-index: 2;
+}
+.btn3 {
+	animation: btn3 0.5s alternate infinite ease-in-out;
+	-webkit-animation: btn3 0.5s alternate infinite ease-in-out;
+}
+@keyframes btn3 {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+	}
+	100% {
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-moz-transform: scale(0.95);
+		-ms-transform: scale(0.95);
+		-o-transform: scale(0.95);
+	}
+}
+/* End Animated Bar Div  */
+
+/* End Header Section */
+.place {
+	background-color: #ff0000;
+	width: 100%;
+	height: 900px;
+}
